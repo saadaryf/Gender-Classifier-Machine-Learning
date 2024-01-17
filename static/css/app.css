@@ -1,0 +1,43 @@
+
+
+.steps{
+    position: relative;
+    top: 2vh;
+    height: 40vh;
+    width: 65%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.step{
+    font-size: 1.3em;
+    display: grid;
+    grid-template-rows: 20% 30% 50%;
+    align-items: center;
+    justify-content: center;
+}
+.step img{
+    margin-left: 30%;
+}
+.step:first-child{
+    border-right: 1px solid #eee;
+}
+.step:last-child{
+    border-left: 1px solid #eee;
+}
+#gender-app{
+    position: relative;
+    top: 100px;
+    border: 2px solid #00f2ff;
+    padding: 20px 60px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    text-transform: uppercase;
+    background: #00f2ff;
+    &:hover{
+        color: white;
+        background: transparent;
+    }
+}

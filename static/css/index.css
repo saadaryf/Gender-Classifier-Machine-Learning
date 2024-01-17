@@ -1,0 +1,30 @@
+
+.container{
+    position: relative;
+    top: 5%;
+    text-align: start;
+    width: 80%;
+    margin: auto;
+    font-size: 1.6em;
+    line-height: 70px;
+}
+.team-members{
+    height: 30vh;
+    top: 12%;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    left: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.member{
+    display: grid;
+    grid-template-rows: 1fr 20% 20% 20%;
+}
+.member:first-child{
+    border-right: 1px solid #eeeeee64;
+}
+.color{
+    color: #00f2ff;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+</head>
+{% endblock  %}
+<body>
+    <header>
+        <nav>
+            <h2><a href="/">Gender Classifier</a></h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/app">App</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block bodyblock %}
+    
+    {% endblock  %}
+</body>
+</html>

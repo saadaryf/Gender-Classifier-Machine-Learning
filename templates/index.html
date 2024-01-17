@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+{% endblock  %}
+
+
+{% block bodyblock %}
+    <br>
+    <div class="container">
+        <h3 class="color">Machine Learning Project</h3>
+        <h1>Face Recognition & Gender Classifier Web App</h1>
+        <h3 class="color">Presented by:</h3>
+    </div>
+    <div class="team-members">
+        <div class="member">
+            <h1 class="color">Lead Developer</h1>
+            <h2>M Saad Arif Dhillon</h2>
+            <h2>L1F20BSSE0291</h2>
+            <p style="color: #ddd;">[ Data Pre-Processing & Traning ]</p>
+        </div>
+        <div class="member">
+            <h1 class="color">Collaborator</h1>
+            <h2>Ali Ahmed</h2>
+            <h2>L1F20BSSE0313</h2>
+            <p style="color: #ddd;">[ Module Development & Pipeline ]</p>
+        </div>
+        <div class="member">
+            <h1 class="color">Collaborator</h1>
+            <h2>Umer Arif</h2>
+            <h2>L1F20BSSE0053</h2>
+            <p style="color: #ddd;">[ Model Integration with Frontend ]</p>
+        </div>
+    </div>
+{% endblock  %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gender.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+{% block bodyblock %}
+<div class="main">
+    <div class="left-col">
+        <h2 class="color">Real Time Video Detection</h2><br>
+        <p>click start video & wait to open camera window</p>
+        <p>to stop/close camera press 'q' button</p>
+        <br><br>
+        <a id="video-btn" href="/video">Start Video</a>
+        <br><br><br><br><br>
+        <hr>
+        <br><br>
+        <h2 class="color">Uploaded File Detection</h2><br>
+        <p>upload img with extention .jpg, .jpeg, .png</p>
+        <p>app will classify between male or female</p>
+        <br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <input type="file" accept=".jpg, .jpeg, .png" name="image-name" required>
+            <input id="upload-btn" type="submit" value="Upload & Predict">
+        </form>
+    </div>
+    <div class="right-col">
+        {% if fileUpload %}
+        <h3>Predicted Image</h3>
+        <img id="pred-img" src="../static/predict/prediction_image.jpg" alt="">
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <th>Detected Face</th>
+                <th>Eigen Image</th>
+                <th>Predicted Gender</th>
+                <th>Score</th>
+            </tr>
+            {% for element in report %}
+            <tr>
+                <td>
+                    <img src="../static/predict/{{ element[0] }}" alt="">
+                </td>
+                <td>
+                    <img src="../static/predict/{{ element[1] }}" alt="">
+                </td>
+                <td>{{ element[2] }}</td>
+                <td>{{ element[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
